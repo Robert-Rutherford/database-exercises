@@ -8,7 +8,7 @@ USE employees;
 --   ON d.dept_no = de.dept_no
 -- WHERE de.to_date = '9999-01-01' AND e.emp_no = 10001;
 
-
+# Problem 2
 SELECT  d.dept_name AS 'Department Name', CONCAT(e.first_name, ' ', e.last_name) AS 'Department Manager'
 FROM employees as e
 JOIN dept_manager as m
@@ -18,7 +18,7 @@ JOIN departments as d
 WHERE m.to_date = '9999-01-01'
 ORDER BY d.dept_name;
 
-
+# Problem 3
 SELECT  d.dept_name AS 'Department Name', CONCAT(e.first_name, ' ', e.last_name) AS 'Department Manager'
 FROM employees as e
 JOIN dept_manager as m
@@ -28,6 +28,7 @@ JOIN departments as d
 WHERE m.to_date = '9999-01-01' AND e.gender = 'F'
 ORDER BY d.dept_name;
 
+# Problem 4
 SELECT t.title AS 'Titles', COUNT(*) AS 'Count'
 FROM employees as e
 JOIN titles as t
@@ -40,7 +41,7 @@ WHERE t.to_date = '9999-01-01' AND d.dept_name = 'Customer Service'
 group by t.title
 ORDER BY t.title;
 
-
+# Problem 5
 SELECT  d.dept_name AS 'Department Name', CONCAT(e.first_name, ' ', e.last_name) AS 'Department Manager',
             s.salary AS 'Salary'
 FROM employees as e
@@ -53,5 +54,5 @@ FROM employees as e
 WHERE m.to_date = '9999-01-01' AND s.to_date = '9999-01-01'
 ORDER BY d.dept_name;
 
-
+# Bonus
 
