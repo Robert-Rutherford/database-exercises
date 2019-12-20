@@ -28,4 +28,22 @@ WHERE emp_no IN (
     WHERE to_date > now()
     ) AND gender = 'F';
 
+# bonus
+# Problem 1
+SELECT dept_name FROM departments
+where dept_no IN (
+    SELECT dept_no FROM dept_manager
+    where emp_no IN (
+        SELECT emp_no FROM employees
+        WHERE gender = 'F'
+        ) AND to_date > now()
+    );
 
+# Problem 2
+SELECT first_name,last_name FROM employees
+WHERE emp_no IN (
+    SELECT emp_no FROM salaries
+    WHERE salary IN (
+        SELECT MAX(salary) FROM salaries
+        )AND to_date > now()
+    );
