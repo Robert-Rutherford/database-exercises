@@ -1,0 +1,31 @@
+--
+-- SELECT p.email as email FROM
+-- profile as p
+-- join ad_page as a
+-- on a.ad_id = p.id
+-- WHERE a.id = 1 order by
+-- p.email;
+--
+-- -- SELECT email as email FROM
+--
+-- SELECT title as 'catagory'
+-- from catagories
+-- where id IN (
+--     SELECT cat_id from
+--     cat_key where ad_id = 1
+-- )order by title;
+--
+-- SELECT title as 'Ad'
+-- from ad_page where id IN (
+--     SELECT ad_id from
+--     cat_key where cat_id IN (
+--     SELECT id from catagories
+--     where title = 'help wanted'
+--     )
+-- ) order by title;
+--
+-- SELECT title as 'ads'
+-- from ads where user_id IN (
+--     SELECT id from users
+--     WHERE user_name = 'bob'
+-- )
